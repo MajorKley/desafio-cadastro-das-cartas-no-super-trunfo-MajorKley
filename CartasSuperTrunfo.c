@@ -30,6 +30,7 @@ scanf("%[^\n]", Estado);
             printf("Área: %f \n", area);
             printf("PIB: %f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
+            printf("O número da carta será A01 \n");
           
             
     printf("Digite a 02 cidade do estado %s:\n", Estado);
@@ -48,7 +49,7 @@ scanf("%[^\n]", Estado);
             printf("Área: %f \n", area);
             printf("PIB: %f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
-            printf("O número da carta será A02");
+            printf("O número da carta será A02 \n");
 
     printf("Digite a 03 cidade do estado %s:\n", Estado);
     scanf(" %[^\n]%*c", &Cid);
@@ -67,7 +68,7 @@ scanf("%[^\n]", Estado);
             printf("Área: %f \n", area);
             printf("PIB: %f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
-            printf("O número da carta será A03");
+            printf("O número da carta será A03 \n");
 
     printf("Digite a 04 cidade do estado %s:\n", Estado);
     scanf(" %[^\n]%*c", &Cid);
