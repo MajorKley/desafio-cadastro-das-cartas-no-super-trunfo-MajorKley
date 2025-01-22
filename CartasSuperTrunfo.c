@@ -6,7 +6,7 @@ int main() {
 
 char Estado[20];
 char Cid [20];
-float populacao, pib, area;
+float populacao, pib, area, densidade, pibpercapta;
 int turismo; //pontos turísticos
 
 printf("Vamos jogar Super Trunfo Paises! Vamos começar cadastrando suas cartas. \n");
@@ -15,7 +15,7 @@ scanf("%[^\n]", Estado);
 
     printf("Agora vamos cadastrar as 04 cidades \n");
     printf("Digite a 01 cidade do estado %s:\n", Estado);
-    scanf(" %[^\n]%*c", &Cid);
+    scanf(" %[^\n]%*c", Cid);
         printf("Digite a Populaçao: \n");
         scanf("%f", &populacao);
         printf("Digite a Área:\n");
@@ -25,12 +25,18 @@ scanf("%[^\n]", Estado);
         printf("Digite o Número de pontos turísticos da cidade: \n");
         scanf("%d", &turismo);
 
+        pibpercapta = pib/populacao;
+        densidade = populacao/ area;
+
             printf("A cidade %s do estado %s possue os seguintes dados: \n", Cid, Estado);
             printf("Populaçao: %f \n", populacao);
             printf("Área: %f \n", area);
             printf("PIB: %f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
+            printf("Pib Per Capta: %.3f \n", pibpercapta);
+            printf("Densidade Populacional: %.3f \n", densidade);
             printf("O número da carta será A01 \n");
+
           
             
     printf("Digite a 02 cidade do estado %s:\n", Estado);
@@ -44,11 +50,16 @@ scanf("%[^\n]", Estado);
         printf("Digite o Número de pontos turísticos da cidade: \n");
         scanf("%d", &turismo);
 
+        pibpercapta = pib/populacao;
+        densidade = populacao/ area;
+
             printf("A cidade %s do estado %s possue os seguintes dados: \n", Cid, Estado);
             printf("Populaçao: %f \n", populacao);
             printf("Área: %f \n", area);
             printf("PIB: %f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
+            printf("Pib Per Capta: %.3f \n", pibpercapta);
+            printf("Densidade Populacional: %.3f \n", densidade);
             printf("O número da carta será A02 \n");
 
     printf("Digite a 03 cidade do estado %s:\n", Estado);
@@ -63,11 +74,16 @@ scanf("%[^\n]", Estado);
         printf("Digite o Número de pontos turísticos da cidade: \n");
         scanf("%d", &turismo);
 
+        pibpercapta = pib/populacao;
+        densidade = populacao/ area;
+
             printf("A cidade %s do estado %s possue os seguintes dados: \n", Cid, Estado);
             printf("Populaçao: %f \n", populacao);
             printf("Área: %f \n", area);
             printf("PIB: %f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
+            printf("Pib Per Capta: %.3f \n", pibpercapta);
+            printf("Densidade Populacional: %.3f \n", densidade);
             printf("O número da carta será A03 \n");
 
     printf("Digite a 04 cidade do estado %s:\n", Estado);
@@ -82,11 +98,16 @@ scanf("%[^\n]", Estado);
         printf("Digite o Número de pontos turísticos da cidade: \n");
         scanf("%d", &turismo);
 
+        pibpercapta = pib/populacao;
+        densidade = populacao/ area;
+
             printf("A cidade %s do estado %s possue os seguintes dados: \n", Cid, Estado);
             printf("Populaçao: %f \n", populacao);
             printf("Área: %f \n", area);
             printf("PIB: %f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
+            printf("Pib Per Capta: %.3f \n", pibpercapta);
+            printf("Densidade Populacional: %.3f \n", densidade);
             printf("O número da carta será A04 \n");
 
         
