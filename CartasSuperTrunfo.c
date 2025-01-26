@@ -8,7 +8,6 @@ char Estado1[20], Estado2[20];
 char Cid1[20], Cid2[20];
 float populacao, pib, area, densidade, pibpercapta; //Dados da primeira cidade
 float populacao2, pib2, area2, densidade2, pibpercapta2; //Dados da segunda cidade
-int rpopulacao, rpib, rarea, rdensidade, rpibpercapta, rturismo, rSuperPoder; //resultados das comparações
 int turismo, turismo2; 
 float SuperPoder, SuperPoder2;
 
@@ -39,13 +38,13 @@ scanf(" %[^\n]%*c", Estado1);
         SuperPoder = populacao + pib + area + densidade + pibpercapta + (float)turismo;
 
             printf("A cidade %s do estado %s possue os seguintes dados: \n", Cid1, Estado1);
-            printf("Populaçao: %.5f \n", populacao);
-            printf("Área: %.5f \n", area);
-            printf("PIB: %.5f \n", pib);
+            printf("Populaçao: %.3f \n", populacao);
+            printf("Área: %.3f \n", area);
+            printf("PIB: %.3f \n", pib);
             printf("Número de Pontos Turísticos:  %d \n", turismo);
             printf("Pib Per Capta: %.5f \n", pibpercapta);
             printf("Densidade Populacional: %.3f \n", densidade);
-            printf("Super Poder: %.10f\n", SuperPoder);
+            printf("Super Poder: %.7f\n", SuperPoder);
            
 //Cadastro da Segunda Carta
 printf("\nAgora vamos para o próximo cadastro!. \n");
@@ -74,35 +73,53 @@ scanf(" %[^\n]%*c", Estado2);// Consome até o \n e limpa o buffer
 
 
             printf("A cidade %s do estado %s possue os seguintes dados: \n", Cid2, Estado2);
-            printf("Populaçao: %.5f \n", populacao2);
-            printf("Área: %.5f \n", area2);
-            printf("PIB: %.5f \n", pib2);
+            printf("Populaçao: %.3f \n", populacao2);
+            printf("Área: %.3f \n", area2);
+            printf("PIB: %.3f \n", pib2);
             printf("Número de Pontos Turísticos:  %d \n", turismo2);
-            printf("Pib Per Capta: %.5f \n", pibpercapta2);
-            printf("Densidade Populacional: %.5f \n", densidade2);
-            printf("Super Poder: %.10f\n", SuperPoder2);
+            printf("Pib Per Capta: %.3f \n", pibpercapta2);
+            printf("Densidade Populacional: %.3f \n", densidade2);
+            printf("Super Poder: %.7f\n", SuperPoder2);
 
 //Comparações entre as habilidades das cartas
 
 printf("\nAgora vamos comparar quem venceu essa batalha:");
-printf("Se a resposta para as comparações: 1 - verdadeiro/ganhador, 0 - falso/perdedor\n");
-   
-    rpopulacao = populacao > populacao2;
-    rarea = area > area2;
-    rpib = pib > pib2;
-    rturismo = turismo > turismo2;
-    rpibpercapta = pibpercapta > pibpercapta2;
-    rdensidade = densidade < densidade2;
-    rSuperPoder = SuperPoder > SuperPoder2;
 
+if(populacao > populacao2){
+    printf(" Primeiro Atributo é o vencedor! \n");
+}else{
+    printf("O Segundo Atributo é o vencedor! \n");
+}
 
-printf("População: %.4f VS %.4f = %d \n", populacao, populacao2, rpopulacao);
-printf("Área: %.4f VS %.4f = %d \n", area, area2, rarea);
-printf("Pib: %.4f VS %.4f = %d \n", pib, pib2, rpib);
-printf("Pontos Turisticos: %d VS %d = %d \n", turismo, turismo2, rturismo);
-printf("Pib per Capta: %.4f VS %.4f = %d \n", pibpercapta, pibpercapta2, rpibpercapta);
-printf("Densidade Populacional: %.4f VS %.4f = %d \n", densidade, densidade2, rdensidade);
-printf("Super Poder: %.4f VS %.4f = %d \n", SuperPoder, SuperPoder2, rSuperPoder);
+if(area > area2){
+    printf(" Primeiro Atributo é o vencedor! \n");
+}else{
+    printf("O Segundo Atributo é o vencedor! \n");
+}
+
+if(pib > pib2){
+    printf(" Primeiro Atributo é o vencedor! \n");
+}else{
+    printf("O Segundo Atributo é o vencedor! \n");
+}
+
+if(turismo > turismo2){
+    printf(" Primeiro Atributo é o vencedor! \n");
+}else{
+    printf("O Segundo Atributo é o vencedor! \n");
+}
+
+if(densidade < densidade2){
+    printf(" Primeiro Atributo é o vencedor! \n");
+}else{
+    printf("O Segundo Atributo é o vencedor! \n");
+}
+
+if(SuperPoder > SuperPoder2){
+    printf(" Primeiro Atributo é o vencedor! \n");
+}else{
+    printf("O Segundo Atributo é o vencedor! \n");
+}
 
 //encerramento
 
