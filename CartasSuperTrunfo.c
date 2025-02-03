@@ -4,7 +4,7 @@
 
 int main() {
 
-int escolha;
+int escolha, resultado;
 char Estado1[20], Estado2[20];
 char Cid1[20], Cid2[20];
 float populacao, pib, area, densidade, pibpercapta; //Dados da primeira cidade
@@ -97,61 +97,48 @@ printf("6. Super Poder das Cartas \n");
 printf("Escolha: ");
 scanf("%d", &escolha);
 
+//comparação irá retornar 1 ou 0, e depois um if else para dizer quem venceu.
+
 //Comparação entre cartas
 switch (escolha)
 {
 case 1:
-    if(populacao > populacao2){
-        printf("Primeiro Atributo é o vencedor! \n");
-        }else{
-        printf("O Segundo Atributo é o vencedor! \n");
-        }
+    resultado = populacao > populacao2 ? 1:0;
 break;
 
 case 2:
-    if(area > area2){
-        printf(" Primeiro Atributo é o vencedor! \n");
-    }else{
-        printf("O Segundo Atributo é o vencedor! \n");
-    }
+    resultado = area > area2? 1:0;
 break;
 
 case 3:
-    if(pib > pib2){
-        printf(" Primeiro Atributo é o vencedor! \n");
-    }else{
-        printf("O Segundo Atributo é o vencedor! \n");
-    }
+   resultado = pib > pib2 ? 1:0;
 break;
 
 case 4:
-    if(turismo > turismo2){
-        printf(" Primeiro Atributo é o vencedor! \n");
-    }else{
-        printf("O Segundo Atributo é o vencedor! \n");
-    }
+    resultado = turismo > turismo2 ? 1:0;
 break;
 
 case 5:
-    if(densidade < densidade2){
-        printf(" Primeiro Atributo é o vencedor! \n");
-    }else{
-        printf("O Segundo Atributo é o vencedor! \n");
-    }
+     resultado = densidade < densidade2 ? 1:0;
 break;
 
 case 6:
-    if(SuperPoder > SuperPoder2){
-        printf(" Primeiro Atributo é o vencedor! \n");
-    }else{
-        printf("O Segundo Atributo é o vencedor! \n");
-    }
+    resultado = SuperPoder > SuperPoder2 ? 1:0;
 break;
 
 default:
     printf("Opção Inválida\n");
     break;
 }
+if(resultado == 1){
+    printf("A carta vencedora é a cidade %s do Estado %s", Cid1, Estado1);
+}else if(resultado == 0) {
+    printf("A carta vencedora é a cidade %s do Estado %s",Cid2, Estado2);
+}else{
+    printf("Houve empate na comparação dos atributos!");
+}
+
+
 
 //encerramento
 
